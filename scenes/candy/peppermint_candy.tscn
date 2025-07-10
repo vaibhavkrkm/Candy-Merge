@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfb7jrtme7br1"]
+
+[ext_resource type="PackedScene" uid="uid://o68mbtnvkilc" path="res://scenes/candy/candy.tscn" id="1_ai8ch"]
+[ext_resource type="Script" path="res://scenes/candy/peppermint_candy.gd" id="2_8w6qn"]
+[ext_resource type="Texture2D" uid="uid://cowwg6f0a0j88" path="res://assets/candies/peppermint_candy.png" id="3_3elja"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6gg6b"]
+radius = 58.8255
+
+[node name="PeppermintCandy" instance=ExtResource("1_ai8ch")]
+mass = 0.9
+script = ExtResource("2_8w6qn")
+TIER = 5
+WIDTH = 116
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+scale = Vector2(1.508, 1.508)
+texture = ExtResource("3_3elja")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0.175, -0.247)
+shape = SubResource("CircleShape2D_6gg6b")

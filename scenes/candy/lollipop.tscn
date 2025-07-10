@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://b86a1xlmll56c"]
+
+[ext_resource type="PackedScene" uid="uid://o68mbtnvkilc" path="res://scenes/candy/candy.tscn" id="1_13h1u"]
+[ext_resource type="Script" path="res://scenes/candy/lollipop.gd" id="2_rbiri"]
+[ext_resource type="Texture2D" uid="uid://c5r5ce70n3hhi" path="res://assets/candies/lollipop.png" id="3_aisd1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ao2rf"]
+radius = 20.0
+height = 52.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5oa4c"]
+radius = 3.279
+height = 80.0
+
+[node name="Lollipop" instance=ExtResource("1_13h1u")]
+mass = 0.7
+script = ExtResource("2_rbiri")
+TIER = 3
+WIDTH = 46
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+scale = Vector2(0.694, 0.694)
+texture = ExtResource("3_aisd1")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -40)
+shape = SubResource("CapsuleShape2D_ao2rf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(-0.279, 25)
+shape = SubResource("CapsuleShape2D_5oa4c")

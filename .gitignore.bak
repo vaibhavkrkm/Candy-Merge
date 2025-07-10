@@ -1,0 +1,21 @@
+.godot/
+.mono/ # If using C#
+
+*.pck
+*.zip
+*.exe
+*.apk
+*.app
+*.ipa
+*.x86_64
+*.x86
+*.wasm
+*.html
+*.js
+*.css
+*.svg
+*.xml
+*.txt
+
+user://
+res://.godot_data/

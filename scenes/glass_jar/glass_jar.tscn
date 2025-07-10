@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://djamuvbw4u2nm"]
+
+[ext_resource type="Texture2D" uid="uid://ces6s86gr2ume" path="res://assets/jar/Glass_Jar.png" id="1_88djf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exaeo"]
+size = Vector2(55, 560)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6owne"]
+size = Vector2(270, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_js0al"]
+size = Vector2(153.24, 106.648)
+
+[node name="GlassJar" type="StaticBody2D"]
+collision_mask = 2
+collision_priority = 1000.0
+
+[node name="Left" type="CollisionShape2D" parent="."]
+position = Vector2(18, 41)
+shape = SubResource("RectangleShape2D_exaeo")
+
+[node name="Right" type="CollisionShape2D" parent="."]
+position = Vector2(464, 40)
+shape = SubResource("RectangleShape2D_exaeo")
+
+[node name="Bottom" type="CollisionShape2D" parent="."]
+position = Vector2(243, 326)
+shape = SubResource("RectangleShape2D_6owne")
+
+[node name="BottomLeft" type="CollisionShape2D" parent="."]
+position = Vector2(39.9757, 315.484)
+rotation = 0.745235
+shape = SubResource("RectangleShape2D_js0al")
+
+[node name="BottomRight" type="CollisionShape2D" parent="."]
+position = Vector2(425, 323)
+rotation = 2.56353
+shape = SubResource("RectangleShape2D_js0al")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(242, 41)
+scale = Vector2(0.836237, 0.836237)
+texture = ExtResource("1_88djf")

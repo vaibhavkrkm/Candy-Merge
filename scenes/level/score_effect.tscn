@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://fyimk8nheia"]
+
+[ext_resource type="FontFile" uid="uid://ce5f6h0feelp3" path="res://assets/fonts/Milky Mania.otf" id="1_3gkc2"]
+[ext_resource type="Script" path="res://scenes/level/score_effect.gd" id="1_03oor"]
+
+[node name="ScoreEffect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1600.0
+offset_bottom = -900.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_03oor")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_3gkc2")
+theme_override_font_sizes/font_size = 40
+text = "10000"
+horizontal_alignment = 1
+vertical_alignment = 1

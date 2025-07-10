@@ -1,0 +1,650 @@
+[gd_scene load_steps=36 format=3 uid="uid://c7drruaogg8u4"]
+
+[ext_resource type="Script" path="res://scenes/level/level.gd" id="1_ywis1"]
+[ext_resource type="Texture2D" uid="uid://4tsrvrl7mycm" path="res://assets/background/background.jpg" id="2_7muy1"]
+[ext_resource type="PackedScene" uid="uid://djamuvbw4u2nm" path="res://scenes/glass_jar/glass_jar.tscn" id="2_8t0m2"]
+[ext_resource type="Texture2D" uid="uid://0nb0d5fsyg6o" path="res://assets/candies/orange_candy.png" id="4_e2dbo"]
+[ext_resource type="Texture2D" uid="uid://d082bxblt4fuy" path="res://assets/candies/gummy_bear.png" id="5_pclv8"]
+[ext_resource type="Texture2D" uid="uid://ctlanbfltlvx3" path="res://assets/ui/BubbleS_pink.png" id="6_l4bl4"]
+[ext_resource type="Texture2D" uid="uid://c5r5ce70n3hhi" path="res://assets/candies/lollipop.png" id="6_ucf1y"]
+[ext_resource type="FontFile" uid="uid://ce5f6h0feelp3" path="res://assets/fonts/Milky Mania.otf" id="7_fw14q"]
+[ext_resource type="Texture2D" uid="uid://cjj3fcftpbcg6" path="res://assets/candies/candy_cane.png" id="7_lemrb"]
+[ext_resource type="Texture2D" uid="uid://cowwg6f0a0j88" path="res://assets/candies/peppermint_candy.png" id="8_76t5y"]
+[ext_resource type="Texture2D" uid="uid://dli7soh5qdghm" path="res://assets/candies/heart_lollipop.png" id="9_vt6m4"]
+[ext_resource type="Texture2D" uid="uid://flx8fsaodh1h" path="res://assets/candies/spiral_lollipop.png" id="10_3nymw"]
+[ext_resource type="Texture2D" uid="uid://llny7i02tji8" path="res://assets/candies/gumball_machine.png" id="11_xh6f8"]
+[ext_resource type="Texture2D" uid="uid://by7qd3vgq7mrd" path="res://assets/ui/line.png" id="12_6n40q"]
+[ext_resource type="PackedScene" uid="uid://dnx1d4trwvjdr" path="res://scenes/level/treats_bubble.tscn" id="15_s0pat"]
+[ext_resource type="Texture2D" uid="uid://cqr356axkpoq8" path="res://assets/ui/ui_rect.png" id="16_uf7sq"]
+[ext_resource type="Texture2D" uid="uid://c61yc5ka06lbn" path="res://assets/ui/good_job.png" id="17_7ib04"]
+[ext_resource type="Texture2D" uid="uid://b03l5656ggced" path="res://assets/buttons/png/Reload (3).png" id="18_mmhve"]
+[ext_resource type="Texture2D" uid="uid://b37inqskmhj1p" path="res://assets/buttons/png/Reload (1).png" id="19_gtq2a"]
+[ext_resource type="Texture2D" uid="uid://dnsx3i7fh5q0m" path="res://assets/buttons/png/Home (2).png" id="19_hpec3"]
+[ext_resource type="Texture2D" uid="uid://kwfk3a7ppvlr" path="res://assets/buttons/png/Home (1).png" id="21_k1tmn"]
+[ext_resource type="Texture2D" uid="uid://dm6mef3tr34i4" path="res://assets/buttons/png/Pause (3).png" id="22_52x7y"]
+[ext_resource type="Texture2D" uid="uid://dynk1x1r1u5tp" path="res://assets/buttons/png/Play (1).png" id="22_82twj"]
+[ext_resource type="Texture2D" uid="uid://hj6y1cakgxi4" path="res://assets/buttons/png/Pause (2).png" id="23_cswt4"]
+[ext_resource type="Texture2D" uid="uid://dx3rsevufgjl6" path="res://assets/buttons/png/Play (3).png" id="23_ej6u7"]
+[ext_resource type="Texture2D" uid="uid://crvlc1l6c1pi2" path="res://assets/ui/new_highscore.png" id="24_gofx5"]
+[ext_resource type="Texture2D" uid="uid://c68sh2kl5ynp5" path="res://assets/buttons/png/Trophy (1).png" id="27_xhwpn"]
+[ext_resource type="Texture2D" uid="uid://ckmntom1urmka" path="res://assets/ui/BubbleS_yellow.png" id="28_5ib24"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0fnf"]
+size = Vector2(424, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1yas"]
+size = Vector2(148.116, 330)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_skcbe"]
+size = Vector2(100.928, 273.858)
+
+[sub_resource type="InputEventKey" id="InputEventKey_i88s3"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_m30s2"]
+events = [SubResource("InputEventKey_i88s3")]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vul84"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+direction = Vector3(1, 1, 1)
+spread = 180.0
+initial_velocity_min = 51.85
+initial_velocity_max = 148.15
+angular_velocity_min = -149.33
+angular_velocity_max = 106.67
+gravity = Vector3(0, 10, 0)
+damping_min = 11.11
+damping_max = 28.89
+scale_min = 0.2
+scale_max = 0.2
+hue_variation_min = -0.42
+hue_variation_max = 0.24
+anim_speed_max = 1.7
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3um5x"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 8.78
+direction = Vector3(0, -1, 1)
+spread = 105.31
+initial_velocity_min = 414.37
+initial_velocity_max = 491.72
+orbit_velocity_min = 100.0
+orbit_velocity_max = 100.0
+gravity = Vector3(0, 1000, 0)
+tangential_accel_min = 25.41
+tangential_accel_max = 25.41
+scale_min = 0.3
+scale_max = 0.3
+
+[node name="Level" type="Node2D" groups=["LevelGroup"]]
+script = ExtResource("1_ywis1")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(800, 450)
+texture = ExtResource("2_7muy1")
+metadata/_edit_lock_ = true
+
+[node name="GlassJar" parent="." instance=ExtResource("2_8t0m2")]
+position = Vector2(561, 530)
+
+[node name="Candies" type="Node2D" parent="."]
+
+[node name="Others" type="Node2D" parent="."]
+
+[node name="JarLimit" type="Area2D" parent="."]
+position = Vector2(0, 48)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JarLimit"]
+position = Vector2(801, 267)
+shape = SubResource("RectangleShape2D_e0fnf")
+
+[node name="TreatToDrop" type="Node2D" parent="."]
+position = Vector2(784, 99)
+
+[node name="DropLine" type="Node2D" parent="TreatToDrop"]
+modulate = Color(1, 1, 1, 0.419608)
+position = Vector2(0, 150)
+rotation = 1.57079
+
+[node name="Sprite2D" type="Sprite2D" parent="TreatToDrop/DropLine"]
+texture = ExtResource("12_6n40q")
+
+[node name="Sprite2D2" type="Sprite2D" parent="TreatToDrop/DropLine"]
+position = Vector2(308, 0.000671387)
+texture = ExtResource("12_6n40q")
+
+[node name="OrangeCandy" type="Sprite2D" parent="TreatToDrop"]
+visible = false
+scale = Vector2(0.514, 0.514)
+texture = ExtResource("4_e2dbo")
+
+[node name="GummyBear" type="Sprite2D" parent="TreatToDrop"]
+visible = false
+scale = Vector2(0.695, 0.695)
+texture = ExtResource("5_pclv8")
+
+[node name="Lollipop" type="Sprite2D" parent="TreatToDrop"]
+visible = false
+scale = Vector2(0.694, 0.694)
+texture = ExtResource("6_ucf1y")
+
+[node name="CandyCane" type="Sprite2D" parent="TreatToDrop"]
+scale = Vector2(0.793, 0.793)
+texture = ExtResource("7_lemrb")
+
+[node name="PeppermintCandy" type="Sprite2D" parent="TreatToDrop"]
+visible = false
+scale = Vector2(1.508, 1.508)
+texture = ExtResource("8_76t5y")
+
+[node name="HeartLollipop" type="Sprite2D" parent="TreatToDrop"]
+visible = false
+scale = Vector2(0.859, 0.859)
+texture = ExtResource("9_vt6m4")
+
+[node name="SpiralLollipop" type="Sprite2D" parent="TreatToDrop"]
+visible = false
+scale = Vector2(1.022, 1.022)
+texture = ExtResource("10_3nymw")
+
+[node name="GumballMachine" type="Sprite2D" parent="TreatToDrop"]
+visible = false
+scale = Vector2(1.069, 1.069)
+texture = ExtResource("11_xh6f8")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="ScoreBubble" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 82.0
+offset_right = 392.0
+offset_bottom = 376.0
+texture = ExtResource("6_l4bl4")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="UI/ScoreBubble"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -33.0
+offset_right = 106.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.87451, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_fw14q")
+theme_override_font_sizes/font_size = 60
+text = "Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextBubble" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 1147.0
+offset_top = 141.0
+offset_right = 1345.0
+offset_bottom = 339.0
+texture = ExtResource("28_5ib24")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="UI/NextBubble"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -73.0
+offset_right = 106.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.976471, 0.254902, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.486275, 0, 0.27451, 1)
+theme_override_fonts/font = ExtResource("7_fw14q")
+theme_override_font_sizes/font_size = 40
+text = "Next:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UI/NextBubble"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -49.5
+offset_top = -115.0
+offset_right = 49.5
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("6_ucf1y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TimeBubble" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 519.0
+offset_right = 380.0
+offset_bottom = 813.0
+texture = ExtResource("6_l4bl4")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="UI/TimeBubble"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -66.0
+offset_right = 126.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.87451, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_fw14q")
+theme_override_font_sizes/font_size = 50
+text = "Your Time:
+00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TreatsBubble" parent="UI" instance=ExtResource("15_s0pat")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1097.0
+offset_top = 405.0
+offset_right = 1563.0
+offset_bottom = 871.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="AndroidButtons" type="Control" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="LeftButton" type="TouchScreenButton" parent="UI/AndroidButtons"]
+position = Vector2(318, 552)
+scale = Vector2(3.82927, 2.04575)
+shape = SubResource("RectangleShape2D_k1yas")
+visibility_mode = 1
+
+[node name="RightButton" type="TouchScreenButton" parent="UI/AndroidButtons"]
+position = Vector2(1286, 552)
+scale = Vector2(3.82927, 2.04575)
+shape = SubResource("RectangleShape2D_k1yas")
+visibility_mode = 1
+
+[node name="DropButton" type="TouchScreenButton" parent="UI/AndroidButtons"]
+position = Vector2(802, 578)
+scale = Vector2(3.82927, 2.04575)
+shape = SubResource("RectangleShape2D_skcbe")
+visibility_mode = 1
+
+[node name="Buttons" type="Control" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Pause" type="TextureButton" parent="UI/Buttons"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -230.0
+offset_top = 52.0
+offset_right = -83.0
+offset_bottom = 199.0
+grow_horizontal = 0
+shortcut = SubResource("Shortcut_m30s2")
+shortcut_in_tooltip = false
+texture_normal = ExtResource("22_52x7y")
+texture_hover = ExtResource("23_cswt4")
+
+[node name="Overlay" type="ColorRect" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.368627)
+
+[node name="GameoverUI" type="Control" parent="UI"]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="UI/GameoverUI"]
+modulate = Color(1, 1, 1, 0.662745)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_uf7sq")
+
+[node name="GoodJob" type="TextureRect" parent="UI/GameoverUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.5
+offset_top = -191.0
+offset_right = 149.5
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_7ib04")
+
+[node name="ScoreLabel" type="Label" parent="UI/GameoverUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.0
+offset_top = -7.0
+offset_right = 141.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.909804, 0.258824, 0.65098, 1)
+theme_override_colors/font_outline_color = Color(0.984314, 0.764706, 0.101961, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("7_fw14q")
+theme_override_font_sizes/font_size = 40
+text = "You Scored: 1000!"
+
+[node name="Replay" type="TextureButton" parent="UI/GameoverUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -204.0
+offset_top = 92.0
+offset_right = -164.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("18_mmhve")
+texture_hover = ExtResource("19_gtq2a")
+
+[node name="Home" type="TextureButton" parent="UI/GameoverUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 111.0
+offset_top = 38.0
+offset_right = 257.0
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("19_hpec3")
+texture_hover = ExtResource("21_k1tmn")
+
+[node name="NewHighscore" type="TextureRect" parent="UI/GameoverUI"]
+visible = false
+layout_mode = 0
+offset_left = -116.0
+offset_top = 36.0
+offset_right = 119.0
+offset_bottom = 160.0
+texture = ExtResource("24_gofx5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PauseUI" type="Control" parent="UI"]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="UI/PauseUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("16_uf7sq")
+
+[node name="Label" type="Label" parent="UI/PauseUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.0
+offset_top = -142.5
+offset_right = 171.0
+offset_bottom = -65.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.909804, 0.258824, 0.65098, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("7_fw14q")
+theme_override_font_sizes/font_size = 70
+text = "Game Paused"
+
+[node name="Replay" type="TextureButton" parent="UI/PauseUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -1.5
+offset_right = 72.0
+offset_bottom = 145.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("18_mmhve")
+texture_hover = ExtResource("19_gtq2a")
+
+[node name="Continue" type="TextureButton" parent="UI/PauseUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 121.0
+offset_top = -2.0
+offset_right = 268.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("22_82twj")
+texture_hover = ExtResource("23_ej6u7")
+
+[node name="Home" type="TextureButton" parent="UI/PauseUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -269.0
+offset_top = -2.0
+offset_right = -123.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("19_hpec3")
+texture_hover = ExtResource("21_k1tmn")
+
+[node name="AchievementUnlockedUI" type="Control" parent="UI"]
+anchors_preset = 0
+offset_left = 604.0
+offset_top = -123.0
+offset_right = 962.0
+offset_bottom = -10.0
+
+[node name="Background" type="TextureRect" parent="UI/AchievementUnlockedUI"]
+modulate = Color(1, 0.486275, 0.254902, 0.341176)
+layout_mode = 0
+offset_right = 355.0
+offset_bottom = 109.0
+texture = ExtResource("16_uf7sq")
+expand_mode = 1
+
+[node name="Icon" type="TextureRect" parent="UI/AchievementUnlockedUI"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 11.0
+offset_right = 96.0
+offset_bottom = 91.0
+texture = ExtResource("27_xhwpn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="UnlockedLabel" type="Label" parent="UI/AchievementUnlockedUI"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 71.0
+offset_right = 365.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0.768627, 1, 0.52549, 1)
+theme_override_colors/font_outline_color = Color(0.788235, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_fw14q")
+theme_override_font_sizes/font_size = 27
+text = "Achievement Unlocked!"
+
+[node name="TitleLabel" type="Label" parent="UI/AchievementUnlockedUI"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 14.0
+offset_right = 319.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("7_fw14q")
+theme_override_font_sizes/font_size = 30
+text = "Sugar Rush"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="UI/AchievementUnlockedUI"]
+position = Vector2(181, 56)
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_vul84")
+texture = ExtResource("4_e2dbo")
+lifetime = 1.2
+one_shot = true
+explosiveness = 0.35
+randomness = 0.23
+
+[node name="GumballCombineEffect" type="GPUParticles2D" parent="."]
+position = Vector2(802, 576)
+emitting = false
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_3um5x")
+texture = ExtResource("4_e2dbo")
+one_shot = true
+speed_scale = 1.5
+explosiveness = 0.58
+randomness = 0.45
+
+[node name="NextCandyTimer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+
+[node name="GameTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="AchievementTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+process_mode = 3
+
+[connection signal="body_entered" from="JarLimit" to="." method="_on_jar_limit_body_entered"]
+[connection signal="pressed" from="UI/AndroidButtons/LeftButton" to="." method="_on_left_button_pressed"]
+[connection signal="released" from="UI/AndroidButtons/LeftButton" to="." method="_on_left_button_released"]
+[connection signal="pressed" from="UI/AndroidButtons/RightButton" to="." method="_on_right_button_pressed"]
+[connection signal="released" from="UI/AndroidButtons/RightButton" to="." method="_on_right_button_released"]
+[connection signal="pressed" from="UI/AndroidButtons/DropButton" to="." method="_on_drop_button_pressed"]
+[connection signal="mouse_entered" from="UI/Buttons/Pause" to="." method="_on_pause_mouse_entered"]
+[connection signal="mouse_exited" from="UI/Buttons/Pause" to="." method="_on_pause_mouse_exited"]
+[connection signal="pressed" from="UI/Buttons/Pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="UI/GameoverUI/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="UI/GameoverUI/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="UI/PauseUI/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="UI/PauseUI/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="UI/PauseUI/Home" to="." method="_on_home_pressed"]
+[connection signal="timeout" from="NextCandyTimer" to="." method="_on_next_candy_timer_timeout"]
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
+[connection signal="timeout" from="AchievementTimer" to="." method="_on_achievement_timer_timeout"]
+
+[editable path="GlassJar"]

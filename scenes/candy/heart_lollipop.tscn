@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://2kguiyqdsc4f"]
+
+[ext_resource type="PackedScene" uid="uid://o68mbtnvkilc" path="res://scenes/candy/candy.tscn" id="1_3w4m1"]
+[ext_resource type="Script" path="res://scenes/candy/heart_lollipop.gd" id="2_sp7xc"]
+[ext_resource type="Texture2D" uid="uid://dli7soh5qdghm" path="res://assets/candies/heart_lollipop.png" id="3_o8m7q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ar7pl"]
+radius = 31.0
+height = 74.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hk0n2"]
+radius = 4.0
+height = 122.0
+
+[node name="HeartLollipop" instance=ExtResource("1_3w4m1")]
+mass = 1.0
+center_of_mass_mode = 1
+center_of_mass = Vector2(0, -60)
+script = ExtResource("2_sp7xc")
+TIER = 6
+WIDTH = 74
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+scale = Vector2(0.859, 0.859)
+texture = ExtResource("3_o8m7q")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -60)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ar7pl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(1, 32)
+shape = SubResource("CapsuleShape2D_hk0n2")

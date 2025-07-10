@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=3 uid="uid://dnvhnkxb0hnd8"]
+
+[ext_resource type="Script" path="res://scenes/main_menu/how_to_play.gd" id="1_1u64a"]
+[ext_resource type="Texture2D" uid="uid://4tsrvrl7mycm" path="res://assets/background/background.jpg" id="1_2n3aw"]
+[ext_resource type="FontFile" uid="uid://ce5f6h0feelp3" path="res://assets/fonts/Milky Mania.otf" id="3_fyhva"]
+[ext_resource type="Texture2D" uid="uid://d1yqc6q7aabc4" path="res://assets/buttons/png/Back (1).png" id="4_3tfhn"]
+[ext_resource type="Texture2D" uid="uid://cjh1sjqhss5sa" path="res://assets/buttons/png/Back (3).png" id="5_1w1e5"]
+[ext_resource type="Texture2D" uid="uid://dym8p2reycfht" path="res://assets/buttons/png/Back (2).png" id="6_16mkp"]
+
+[node name="HowToPlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1u64a")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1500, 1000)
+texture = ExtResource("1_2n3aw")
+metadata/_edit_lock_ = true
+
+[node name="HowToPlayLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -205.0
+offset_top = 96.0
+offset_right = 366.0
+offset_bottom = 202.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0.653227, 0, 0.147585, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("3_fyhva")
+theme_override_fonts/bold_font = ExtResource("3_fyhva")
+theme_override_font_sizes/normal_font_size = 100
+theme_override_font_sizes/bold_font_size = 100
+text = "How To Play?"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Line" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 200.0
+offset_right = 1129.0
+offset_bottom = 207.0
+color = Color(0.654902, 0, 0.14902, 1)
+
+[node name="HowToPlayTextBackground" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 230.0
+offset_right = -34.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+color = Color(0.494118, 0.164706, 0.596078, 0.631373)
+
+[node name="Label" type="Label" parent="HowToPlayTextBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("3_fyhva")
+theme_override_font_sizes/font_size = 40
+text = "🌟Drop those delicious candies into the jar!
+😥But don't let them get out of the jar!
+🍭Combine the same type of candies to get a better candy!
+🎰Try to get a Gumball Machine, the Candy Vending Machine if you can!
+💯Score as much you can and let us know in the comments of the game page! 😁
+
+Controls:
+PC:
+* Use Mouse to move, click/SPACE/ENTER to drop candy!
+
+Android:
+* Tap left/right side of screen to move candy
+* Tap BOTTOM of Jar to drop candy"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 178.0
+offset_bottom = 179.0
+texture_normal = ExtResource("4_3tfhn")
+texture_pressed = ExtResource("5_1w1e5")
+texture_hover = ExtResource("6_16mkp")
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

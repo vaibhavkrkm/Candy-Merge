@@ -1,0 +1,94 @@
+[gd_scene load_steps=15 format=3 uid="uid://dlof82uuny5p8"]
+
+[ext_resource type="Script" path="res://scenes/global.gd" id="1_474we"]
+[ext_resource type="AudioStream" uid="uid://dal48kym0nsqe" path="res://assets/music/be-happy-116701.mp3" id="2_sxw7h"]
+[ext_resource type="AudioStream" uid="uid://c52w4ple86g7" path="res://assets/music/viyn-cotton-candy-loop-version-13253.mp3" id="3_pgnaf"]
+[ext_resource type="AudioStream" uid="uid://c1km884slmkd1" path="res://assets/sfx/combine1.wav" id="4_48g8w"]
+[ext_resource type="AudioStream" uid="uid://vrk4oe0wtsgb" path="res://assets/sfx/combine2.mp3" id="5_fsekp"]
+[ext_resource type="AudioStream" uid="uid://dsf4nlwgkiqlw" path="res://assets/sfx/achievement.mp3" id="6_1kysw"]
+[ext_resource type="Texture2D" uid="uid://chn25afgnv5nq" path="res://assets/buttons/png/Trophy (4).png" id="6_rx5mi"]
+[ext_resource type="AudioStream" uid="uid://bpcfqd7oyjp4b" path="res://assets/sfx/drop.wav" id="6_ub4ab"]
+[ext_resource type="Texture2D" uid="uid://bqcghuxx42ncs" path="res://assets/buttons/png/Trophy (2).png" id="7_4ulwa"]
+[ext_resource type="AudioStream" uid="uid://c3f0upxay4aa3" path="res://assets/sfx/mixkit-interface-device-click-2577.wav" id="7_ry5i2"]
+[ext_resource type="Texture2D" uid="uid://c68sh2kl5ynp5" path="res://assets/buttons/png/Trophy (1).png" id="8_47f66"]
+[ext_resource type="AudioStream" uid="uid://cmi0yuasd7iqh" path="res://assets/sfx/Win.wav" id="8_hntnk"]
+[ext_resource type="AudioStream" uid="uid://dvsmxcdfef3if" path="res://assets/sfx/sfx_losing.wav" id="9_5muyj"]
+[ext_resource type="Texture2D" uid="uid://cayoriuu0u3ik" path="res://assets/buttons/png/Trophy (3).png" id="9_omslp"]
+
+[node name="Global" type="Node"]
+script = ExtResource("1_474we")
+
+[node name="Music" type="Node" parent="."]
+
+[node name="MainMenuMusic" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("2_sxw7h")
+volume_db = -6.887
+
+[node name="LevelMusic" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("3_pgnaf")
+volume_db = -6.887
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Combine1Sound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("4_48g8w")
+volume_db = -13.087
+pitch_scale = 1.29
+
+[node name="Combine2Sound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("5_fsekp")
+volume_db = 3.444
+
+[node name="Combine3Sound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("5_fsekp")
+volume_db = 3.444
+pitch_scale = 1.38
+
+[node name="DropSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("6_ub4ab")
+
+[node name="AchievementSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("6_1kysw")
+volume_db = 4.0
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="Sounds"]
+process_mode = 3
+stream = ExtResource("7_ry5i2")
+volume_db = 1.21
+
+[node name="NewHighscoreSound" type="AudioStreamPlayer" parent="Sounds"]
+process_mode = 3
+stream = ExtResource("8_hntnk")
+volume_db = 2.755
+
+[node name="GameoverSound" type="AudioStreamPlayer" parent="Sounds"]
+process_mode = 3
+stream = ExtResource("9_5muyj")
+
+[node name="AchievementIcons" type="Node" parent="."]
+
+[node name="Icon1" type="TextureRect" parent="AchievementIcons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_rx5mi")
+
+[node name="Icon2" type="TextureRect" parent="AchievementIcons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_4ulwa")
+
+[node name="Icon3" type="TextureRect" parent="AchievementIcons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_47f66")
+
+[node name="Icon4" type="TextureRect" parent="AchievementIcons"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_omslp")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

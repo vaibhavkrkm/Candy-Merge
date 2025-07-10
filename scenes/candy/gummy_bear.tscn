@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://csx7tqsnpuooi"]
+
+[ext_resource type="PackedScene" uid="uid://o68mbtnvkilc" path="res://scenes/candy/candy.tscn" id="1_23wtx"]
+[ext_resource type="Script" path="res://scenes/candy/gummy_bear.gd" id="2_3qkun"]
+[ext_resource type="Texture2D" uid="uid://d082bxblt4fuy" path="res://assets/candies/gummy_bear.png" id="3_kaqjt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ao2rf"]
+radius = 14.0
+height = 60.0
+
+[node name="GummyBear" instance=ExtResource("1_23wtx")]
+mass = 0.6
+script = ExtResource("2_3qkun")
+TIER = 2
+WIDTH = 28
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+scale = Vector2(0.695, 0.695)
+texture = ExtResource("3_kaqjt")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CapsuleShape2D_ao2rf")

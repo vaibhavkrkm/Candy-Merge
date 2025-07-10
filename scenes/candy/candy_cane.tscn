@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtbn500injtv"]
+
+[ext_resource type="PackedScene" uid="uid://o68mbtnvkilc" path="res://scenes/candy/candy.tscn" id="1_cpnf6"]
+[ext_resource type="Script" path="res://scenes/candy/candy_cane.gd" id="1_rsjio"]
+[ext_resource type="Texture2D" uid="uid://cjj3fcftpbcg6" path="res://assets/candies/candy_cane.png" id="3_gcl6b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ao2rf"]
+radius = 24.6403
+height = 56.3152
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2hnr3"]
+radius = 6.67602
+height = 87.1308
+
+[node name="CandyCane" instance=ExtResource("1_cpnf6")]
+mass = 0.8
+center_of_mass_mode = 1
+center_of_mass = Vector2(5, -23)
+script = ExtResource("1_rsjio")
+TIER = 4
+WIDTH = 63
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+scale = Vector2(0.793, 0.793)
+texture = ExtResource("3_gcl6b")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(7, -32)
+rotation = 0.441465
+shape = SubResource("CapsuleShape2D_ao2rf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(-5.2, 22)
+rotation = 0.561636
+shape = SubResource("CapsuleShape2D_2hnr3")

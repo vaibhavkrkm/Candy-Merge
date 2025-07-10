@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc5y3e0mngthc"]
+
+[ext_resource type="Script" path="res://scenes/logo_scene.gd" id="1_j4oak"]
+[ext_resource type="Texture2D" uid="uid://bmdv16ehr2h0x" path="res://assets/ui/Background_Logo.png" id="1_lpte7"]
+[ext_resource type="Texture2D" uid="uid://cifd8io0x0bw6" path="res://assets/ui/team_logo.png" id="2_gfax1"]
+
+[node name="LogoScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j4oak")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lpte7")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -316.5
+offset_top = -316.5
+offset_right = 316.5
+offset_bottom = 316.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gfax1")
+expand_mode = 1
+
+[node name="SceneTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="SceneTimer" to="." method="_on_scene_timer_timeout"]

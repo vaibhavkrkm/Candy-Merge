@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://c16vjq514yt4g"]
+
+[ext_resource type="Texture2D" uid="uid://chn25afgnv5nq" path="res://assets/buttons/png/Trophy (4).png" id="1_gfd4h"]
+[ext_resource type="FontFile" uid="uid://ce5f6h0feelp3" path="res://assets/fonts/Milky Mania.otf" id="2_040bo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1vgf"]
+bg_color = Color(0.819608, 0.180392, 0.580392, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.713726, 0.717647, 1)
+
+[node name="Achievement" type="HBoxContainer"]
+theme_override_constants/separation = 30
+metadata/progress_bar = NodePath("VBoxContainer/Progress")
+metadata/title = NodePath("VBoxContainer/Title")
+metadata/desc = NodePath("VBoxContainer/Desc")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_gfd4h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_040bo")
+theme_override_font_sizes/font_size = 50
+text = "Achievement Title"
+
+[node name="Desc" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_040bo")
+theme_override_font_sizes/font_size = 40
+text = "Achievement Description"
+
+[node name="Progress" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_b1vgf")

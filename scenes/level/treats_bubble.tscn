@@ -1,0 +1,173 @@
+[gd_scene load_steps=11 format=3 uid="uid://dnx1d4trwvjdr"]
+
+[ext_resource type="Texture2D" uid="uid://cqgf71nv2bdaf" path="res://assets/ui/BubbleS_orange.png" id="1_bhtr0"]
+[ext_resource type="Texture2D" uid="uid://0nb0d5fsyg6o" path="res://assets/candies/orange_candy.png" id="2_es0ok"]
+[ext_resource type="Texture2D" uid="uid://d082bxblt4fuy" path="res://assets/candies/gummy_bear.png" id="3_4xyeb"]
+[ext_resource type="Texture2D" uid="uid://c5r5ce70n3hhi" path="res://assets/candies/lollipop.png" id="4_2rovj"]
+[ext_resource type="Texture2D" uid="uid://cjj3fcftpbcg6" path="res://assets/candies/candy_cane.png" id="5_vroev"]
+[ext_resource type="Texture2D" uid="uid://cowwg6f0a0j88" path="res://assets/candies/peppermint_candy.png" id="6_75oto"]
+[ext_resource type="Texture2D" uid="uid://dli7soh5qdghm" path="res://assets/candies/heart_lollipop.png" id="7_l5yb3"]
+[ext_resource type="Texture2D" uid="uid://flx8fsaodh1h" path="res://assets/candies/spiral_lollipop.png" id="8_kl56i"]
+[ext_resource type="Texture2D" uid="uid://llny7i02tji8" path="res://assets/candies/gumball_machine.png" id="9_4cdtj"]
+[ext_resource type="Texture2D" uid="uid://dpggas4q0sqp0" path="res://assets/ui/curved-arrow.png" id="10_d1t4y"]
+
+[node name="TreatsBubble" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bubble" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.611765)
+layout_mode = 0
+offset_right = 466.0
+offset_bottom = 466.0
+texture = ExtResource("1_bhtr0")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="OrangeCandy" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 36.0
+offset_right = 300.0
+offset_bottom = 70.0
+texture = ExtResource("2_es0ok")
+expand_mode = 1
+
+[node name="GummyBear" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 69.0
+offset_right = 356.0
+offset_bottom = 143.0
+texture = ExtResource("3_4xyeb")
+expand_mode = 1
+
+[node name="Lollipop" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 155.0
+offset_right = 385.0
+offset_bottom = 269.0
+texture = ExtResource("4_2rovj")
+expand_mode = 1
+
+[node name="CandyCane" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 282.0
+offset_right = 372.0
+offset_bottom = 396.0
+texture = ExtResource("5_vroev")
+expand_mode = 1
+
+[node name="PeppermintCandy" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 327.0
+offset_right = 297.0
+offset_bottom = 419.0
+texture = ExtResource("6_75oto")
+expand_mode = 1
+
+[node name="HeartLollipop" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 283.0
+offset_right = 188.0
+offset_bottom = 427.0
+texture = ExtResource("7_l5yb3")
+expand_mode = 1
+
+[node name="SpiralLollipop" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 185.0
+offset_right = 122.0
+offset_bottom = 316.0
+texture = ExtResource("8_kl56i")
+expand_mode = 1
+
+[node name="GumballMachine" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 82.0
+offset_right = 283.0
+offset_bottom = 268.0
+texture = ExtResource("9_4cdtj")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Arrows" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Arrow" type="TextureRect" parent="Arrows"]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 137.0
+offset_right = 429.0
+offset_bottom = 240.0
+rotation = 3.14159
+texture = ExtResource("10_d1t4y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Arrow2" type="TextureRect" parent="Arrows"]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 243.0
+offset_right = 431.0
+offset_bottom = 346.0
+rotation = 3.92699
+texture = ExtResource("10_d1t4y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Arrow3" type="TextureRect" parent="Arrows"]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 324.0
+offset_right = 375.0
+offset_bottom = 427.0
+rotation = 4.57531
+texture = ExtResource("10_d1t4y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Arrow4" type="TextureRect" parent="Arrows"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 293.0
+offset_right = 266.0
+offset_bottom = 396.0
+rotation = 5.71875
+texture = ExtResource("10_d1t4y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Arrow5" type="TextureRect" parent="Arrows"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 205.0
+offset_right = 205.0
+offset_bottom = 308.0
+rotation = 6.40802
+texture = ExtResource("10_d1t4y")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Arrow6" type="TextureRect" parent="Arrows"]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 110.0
+offset_right = 326.0
+offset_bottom = 237.0
+rotation = 7.91043
+texture = ExtResource("10_d1t4y")
+expand_mode = 1
+stretch_mode = 4
