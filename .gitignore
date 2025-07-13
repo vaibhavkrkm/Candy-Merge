@@ -15,7 +15,6 @@
 *.css
 *.svg
 *.xml
-*.txt
 
 user://
 res://.godot_data/
