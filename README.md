@@ -6,7 +6,7 @@
 <img src="https://img.itch.zone/aW1hZ2UvMjQ5NjIyMy8xNDgzNjkzOS5wbmc=/794x1000/IWwDsy.png" width=380 height=auto>
 
 ## ✨ Overview
-Candy Merge is a delicious puzzle game where you can create new candies by merging the same ones! This game is **heavily inspired** by the famous **Japanese Suika Game**!
+Candy Merge is a delicious puzzle game where you can create new candies by merging the same ones! This game is **heavily inspired** by the famous [**Japanese Suika Game**](https://play.google.com/store/apps/details?id=com.aladdinx.suikagame&hl=en-US&pli=1)!
 
 ## 🕹️ How to Play
 **Objective:** Merge two candies of the same type to form a new candy, keep going and you may create the ultimate **Gumball Machine**! Score as much as you can and try merging two Gumball Machines to see if you can!
