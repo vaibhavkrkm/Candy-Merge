@@ -18,7 +18,7 @@ Candy Merge is a delicious puzzle game where you can create new candies by mergi
 ## 🍬 Installation and Playing
 
 ### Playing the Game (via pre-built executable)
-1. Download the latest version of the game from [releases](https://github.com/vaibhavkrkm/Candy-Merge/releases).
+1. Download the latest version of the game from [releases](https://github.com/vaibhavkrkm/Candy-Merge/releases) or [itch.io page](https://lets-connect-team.itch.io/candy-merge).
 2. Unzip the downloaded ZIP file.
 3. Run *CandyMerge.exe* and start playing!
 
