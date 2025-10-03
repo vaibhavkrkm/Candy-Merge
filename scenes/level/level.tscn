@@ -198,6 +198,21 @@ text = "Score: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ComboLabel" type="Label" parent="UI/ScoreBubble"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 65.0
+offset_right = 267.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(1, 0.831373, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.854902, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_fw14q")
+theme_override_font_sizes/font_size = 40
+text = "Combo: x1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
 [node name="NextBubble" type="TextureRect" parent="UI"]
 layout_mode = 0
 offset_left = 1147.0
@@ -629,6 +644,9 @@ one_shot = true
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 process_mode = 3
 
+[node name="ComboTextTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="body_entered" from="JarLimit" to="." method="_on_jar_limit_body_entered"]
 [connection signal="pressed" from="UI/AndroidButtons/LeftButton" to="." method="_on_left_button_pressed"]
 [connection signal="released" from="UI/AndroidButtons/LeftButton" to="." method="_on_left_button_released"]
@@ -646,5 +664,6 @@ process_mode = 3
 [connection signal="timeout" from="NextCandyTimer" to="." method="_on_next_candy_timer_timeout"]
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
 [connection signal="timeout" from="AchievementTimer" to="." method="_on_achievement_timer_timeout"]
+[connection signal="timeout" from="ComboTextTimer" to="." method="_on_combo_text_timer_timeout"]
 
 [editable path="GlassJar"]

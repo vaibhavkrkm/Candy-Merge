@@ -19,8 +19,8 @@ func _ready():
 func set_score(tier):
 	var score
 	if (tier != 8):
-		score = 10*tier
+		score = 10 * tier + (Global.combo_counter - 1)
 	else:
-		score = 1000
+		score = 1000 + (Global.combo_counter - 1)
 		$Label.scale = 2
 	$Label.text = str(score)

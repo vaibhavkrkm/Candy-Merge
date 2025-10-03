@@ -32,7 +32,7 @@ volume_db = -6.887
 
 [node name="Combine1Sound" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource("4_48g8w")
-volume_db = -13.087
+volume_db = -17.42
 pitch_scale = 1.29
 
 [node name="Combine2Sound" type="AudioStreamPlayer" parent="Sounds"]
@@ -46,6 +46,7 @@ pitch_scale = 1.38
 
 [node name="DropSound" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource("6_ub4ab")
+volume_db = -5.572
 
 [node name="AchievementSound" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource("6_1kysw")
@@ -92,3 +93,9 @@ offset_bottom = 40.0
 texture = ExtResource("9_omslp")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="ComboTimer" type="Timer" parent="."]
+wait_time = 0.75
+one_shot = true
+
+[connection signal="timeout" from="ComboTimer" to="." method="_on_combo_timer_timeout"]

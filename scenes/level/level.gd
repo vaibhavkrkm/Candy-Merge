@@ -14,12 +14,15 @@ const TREATS = [
 const SCORE_EFFECT = preload("res://scenes/level/score_effect.tscn")
 const STARTING_TREAT = TREATS[0]
 
+@onready var ComboLabel = $UI/ScoreBubble/ComboLabel
+@onready var ComboTextTimer = $ComboTextTimer
 @onready var next_candy = STARTING_TREAT.instantiate()
 @onready var next2_candy
 
 var can_drop = true
 var move_dir = null
 var move_speed = 400
+var combo_tween: Tween
 
 
 func _ready():
@@ -30,6 +33,9 @@ func _ready():
 		if (not Global.LevelMusic.playing):
 			Global.LevelMusic.play()
 	update_treat_to_drop()
+	
+	# hide combo label
+	ComboLabel.modulate.a = 0
 	
 	var candy_no = randi_range(1, 4)
 	var candy_ind
@@ -70,8 +76,26 @@ func _process(delta):
 				$TreatToDrop.position.x = $GlassJar/Right.global_position.x - right_offset
 	
 	$UI/ScoreBubble/Label.text = "Score: " + str(Global.score)
+	if (Global.combo_counter > 1):
+		# setting the combo text
+		ComboLabel.text = "Combo: x" + str(Global.combo_counter - 1)
+		
+		# killing the combo tween if running
+		if (combo_tween and combo_tween.is_running()):
+			combo_tween.kill()
+
+		# making the combo label visible
+		ComboLabel.modulate.a = 1
+		# starting the combo timer
+		ComboTextTimer.start()
 	
-	$Background.rotation_degrees += 5*delta
+	$Background.rotation_degrees += 5 * delta
+
+
+func _on_combo_text_timer_timeout():
+	# reset combo text
+	combo_tween = create_tween()
+	combo_tween.tween_property(ComboLabel, "modulate:a", 0.0, 0.3).from_current()
 
 
 func _input(event):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://62nhwnan14uv"]
+[gd_scene load_steps=14 format=3 uid="uid://62nhwnan14uv"]
 
 [ext_resource type="Script" path="res://scenes/main_menu/achievements.gd" id="1_bsfrf"]
 [ext_resource type="Texture2D" uid="uid://4tsrvrl7mycm" path="res://assets/background/background.jpg" id="2_5gsrf"]
@@ -11,6 +11,27 @@
 [ext_resource type="Texture2D" uid="uid://d1yqc6q7aabc4" path="res://assets/buttons/png/Back (1).png" id="9_y7x3s"]
 [ext_resource type="Texture2D" uid="uid://cjh1sjqhss5sa" path="res://assets/buttons/png/Back (3).png" id="10_kmfc2"]
 [ext_resource type="Texture2D" uid="uid://dym8p2reycfht" path="res://assets/buttons/png/Back (2).png" id="11_gnbyf"]
+
+[sub_resource type="Animation" id="Animation_c0yck"]
+resource_name = "AchievementsLogo"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.9, 0.9), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tpwgr"]
+_data = {
+"AchievementsLogo": SubResource("Animation_c0yck")
+}
 
 [node name="Achievements" type="Control"]
 layout_mode = 3
@@ -42,7 +63,13 @@ offset_top = 24.0
 offset_right = 220.0
 offset_bottom = 366.0
 grow_horizontal = 2
+pivot_offset = Vector2(220, 171)
 texture = ExtResource("3_a2tfs")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Logo"]
+libraries = {
+"": SubResource("AnimationLibrary_tpwgr")
+}
 
 [node name="AchievementsUI" type="TextureRect" parent="."]
 layout_mode = 1

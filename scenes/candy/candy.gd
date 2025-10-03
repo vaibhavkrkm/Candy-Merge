@@ -164,9 +164,14 @@ func _on_body_entered(body):
 				shape_owner_clear_shapes(this_id)
 				shape_owner_clear_shapes(other_id)
 				
+				Global.ComboTimer.start()
+				var pitch_scale = 1.29 + (Global.combo_counter * 0.1)
+				Global.combo_counter += 1
+				print(Global.combo_counter)
+				
 				# playing appropriate sfx
 				if (TIER < 7):
-					Global.play_sound("Combine1Sound")
+					Global.play_sound("Combine1Sound", pitch_scale)
 				elif (TIER == 7):
 					Global.play_sound("Combine2Sound")
 				else:

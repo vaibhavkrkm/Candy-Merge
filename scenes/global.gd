@@ -13,9 +13,12 @@ const plr_path = "user://plr.dat"
 @onready var LevelMusic = $Music/LevelMusic
 @onready var Combine1 = $Sounds/Combine1Sound
 @onready var Combine2 = $Sounds/Combine2Sound
+@onready var ComboTimer = $ComboTimer
+@onready var initial_combine1_pitch = Combine1.pitch_scale
 
 var game_time = 0  # in seconds
 var score = 0
+var combo_counter = 0
 
 var player_name = null
 var highscore = 0
@@ -51,8 +54,10 @@ func reset_game():
 	game_time = 0
 
 
-func play_sound(sound):
+func play_sound(sound, pitch_scale=null):
 	if (sfx):
+		if (pitch_scale != null):
+			$Sounds.get_node(sound).pitch_scale = pitch_scale
 		$Sounds.get_node(sound).play()
 
 
@@ -64,9 +69,9 @@ func format_time(seconds):
 
 func append_score(tier):
 	if (tier != 8):
-		score += 10*tier
+		score += 10 * tier + (combo_counter - 1)
 	else:
-		score += 1000
+		score += 1000 + (combo_counter - 1)
 
 
 func save_highscore():
@@ -130,3 +135,8 @@ func ldrboard_update(playerID, playerName, score):
 		var headers = ["Content-Type: application/json", "api-key: lamb16", "game-id: 16"]
 		$HTTPRequest.request_completed.connect(_on_request_completed)
 		$HTTPRequest.request(url, headers, HTTPClient.METHOD_POST, json)
+
+
+func _on_combo_timer_timeout():
+	combo_counter = 0
+	Combine1.pitch_scale = initial_combine1_pitch
